@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: rgba(128, 0, 255, 0.856);
+    background: linear-gradient(135deg, #0a0000, #39006e);
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    padding: 20px;
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #7f03f3d7;
+    
+    box-shadow:
+        0 0 10px #6f1ebb,
+        0 0 20px #430d72,
+        0 0 40px #4a1b70;
+
+    animation: float 3s infinite ease-in-out, aura 2s infinite alternate;
+}
+
+@keyframes aura {
+    from {
+        box-shadow:
+            0 0 10px #692ba3,
+            0 0 20px #7e22ce;
+    }
+    to {
+        box-shadow:
+            0 0 20px #8518f1,
+            0 0 40px #9333ea,
+            0 0 60px #7e22ce;
+    }
+}
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-12px);}
+    100% {transform: translateY(0);}
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    border-radius: 50px;
+    padding: 15px 20px;
+    margin: 15px auto;
+    width: 85%;
+    max-width: 420px;
+    text-decoration: none;
+    color: rgba(132, 0, 255, 0.925);
+    font-size: 18px;
+
+    background: rgba(81, 39, 119, 0.219);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(87, 46, 153, 0.3);
+
+    transition: 0.3s;
+}
+
+.btn i {
+    font-size: 22px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: rgb(119, 44, 238);
+    color: black;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.section {
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6013ad;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #5d2096;
+    }
+    to {
+        text-shadow: 0 0 20px #7d45b6;
+    }
+}
